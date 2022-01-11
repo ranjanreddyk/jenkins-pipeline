@@ -1,0 +1,14 @@
+pipeline {
+
+agent any {
+  stages{
+    options {
+         timestamp()
+}
+  step{
+      environment {
+            cc= 'clang'
+      }
+   }
+}
+}

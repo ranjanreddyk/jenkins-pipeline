@@ -1,14 +1,17 @@
 pipeline {
-
-agent any {
-  stages{
-    options {
-         timestamp()
-}
-  step{
-      environment {
-            cc= 'clang'
-      }
-   }
-}
+    agent any
+    stages{
+      stage {"build"}
+         steps{
+             options {
+                 timestamp()
+             }
+          }
+      }    
+         steps{
+              environment {
+                   cc= 'clang'
+              }
+         }
+     }
 }
